@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Shapecode\Iconify\IconSetLoaderInterface: '@Shapecode\Iconify\IconSetLoader'
+    Shapecode\Iconify\IconSetLoader: ~
+
+    Shapecode\Iconify\IconifyInterface: '@Shapecode\Iconify\Iconify'
+    Shapecode\Iconify\Iconify: ~
+
+    Shapecode\Iconify\Symfony\Iconify\IconifyInterface: '@Shapecode\Iconify\Symfony\Iconify\Iconify'
+    Shapecode\Iconify\Symfony\Iconify\Iconify: ~
