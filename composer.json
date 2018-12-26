@@ -1,0 +1,42 @@
+{
+    "name": "shapecode/iconify-bundle",
+    "description": "Symfony implementation of iconify.",
+    "keywords": [
+        "iconify",
+        "symfony",
+        "shapecode"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/shapecode/iconify-bundle",
+    "support": {
+        "email": "git@shapecode.de",
+        "issues": "https://github.com/shapecode/iconify-bundle/issues",
+        "source": "https://github.com/shapecode/iconify-bundle/releases",
+        "wiki": "https://github.com/shapecode/iconify-bundle/wiki"
+    },
+    "authors": [
+        {
+            "name": "Shapecode",
+            "homepage": "https://shapecode.de",
+            "email": "git@shapecode.de"
+        }
+    ],
+    "require": {
+        "php": "~7.1",
+
+        "shapecode/iconify": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shapecode\\Iconify\\Bundle\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
