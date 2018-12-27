@@ -5,7 +5,7 @@ namespace Shapecode\Iconify\Symfony\DependencyInjection;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader;
-use Symfony\Component\HttpKernel\DependencyInjection\ConfigurableExtension;
+use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 /**
  * Class IconifyExtension
@@ -13,13 +13,13 @@ use Symfony\Component\HttpKernel\DependencyInjection\ConfigurableExtension;
  * @package Shapecode\Iconify\Symfony\DependencyInjection
  * @author  Nikita Loges
  */
-class IconifyExtension extends ConfigurableExtension
+class IconifyExtension extends Extension
 {
 
     /**
      * @inheritdoc
      */
-    public function loadInternal(array $config, ContainerBuilder $container)
+    public function load(array $config, ContainerBuilder $container)
     {
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.yaml');

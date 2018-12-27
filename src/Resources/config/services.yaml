@@ -12,3 +12,5 @@ services:
 
     Shapecode\Iconify\Symfony\Iconify\IconifyInterface: '@Shapecode\Iconify\Symfony\Iconify\Iconify'
     Shapecode\Iconify\Symfony\Iconify\Iconify: ~
+
+    Shapecode\Iconify\Symfony\Twig\Extensions\IconifyExtension: ~
