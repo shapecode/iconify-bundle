@@ -2,7 +2,7 @@
 
 namespace Shapecode\Iconify\Symfony\Twig\Extensions;
 
-use Shapecode\Iconify\Symfony\Iconify\IconifyInterface;
+use Shapecode\Iconify\IconifyInterface;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
@@ -59,7 +59,7 @@ class IconifyExtension extends AbstractExtension
      */
     public function getIconify($icon, array $options = [])
     {
-        return $this->iconify->getIcon($icon, $options);
+        return $this->iconify->getBody($icon, $options);
     }
 
     /**
@@ -70,6 +70,6 @@ class IconifyExtension extends AbstractExtension
      */
     public function getIconifyFilter($value, array $options = [])
     {
-        return $this->iconify->getIconFilter($value, $options);
+        return $value . ' ' . $this->iconify->getBody($value, $options);
     }
 }
